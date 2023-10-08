@@ -45,6 +45,13 @@ namespace PersonData.Controllers
             return View(naturalPerson);
         }
 
+        //calcular la edad
+        private int CalculateAge(int birthYear)
+        {
+            DateTime currentDate = DateTime.Today;
+            int age = currentDate.Year - birthYear;
+            return age;
+        }
 
         // GET: NaturalPersons/Create
         public IActionResult Create()
